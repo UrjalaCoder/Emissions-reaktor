@@ -32,6 +32,6 @@ app.get("/data/:country", (req, res) => {
 });
 
 // First handle data -->
-app.listen(3000, function() {
+app.listen(process.env.PORT || 3001, function() {
     console.log("Started!");
 });
