@@ -1,6 +1,7 @@
 'use strict';
+console.log(process.env);
 const MongoClient = require('mongodb').MongoClient;
-const url = process.env.MONGODB_URI;
+const url = "mongodb://root:r00t_user@ds253243.mlab.com:53243/reaktortyodb";
 const dbNAme = "reaktortyodb";
 const collectionName = "Reaktortyo";
 
