@@ -70,7 +70,7 @@ function handleAddButton(button) {
             }
         });
         console.log(alreadyUsed);
-        while(colorIndex in alreadyUsed) {
+        while(colorIndex.indexOf(alreadyUsed) !== -1) {
             colorIndex = Math.floor(Math.random() * COLORS.length);
         }
 
