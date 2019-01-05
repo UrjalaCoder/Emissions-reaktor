@@ -3,6 +3,10 @@ body {
     padding: 0px;
 }
 
+div#mainContainer {
+    padding-top: 32px;
+}
+
 .pressed {
     background-color: blue;
     border: 1px solid black;
