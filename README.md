@@ -11,6 +11,7 @@ On client side I use jQuery and ChartJS. jQuery for all kinds of interactive ele
 ## Data
 I used these open domain datafiles for my application.
 Population data (CSV): http://api.worldbank.org/v2/en/indicator/SP.POP.TOTL?downloadformat=csv
+
 Emissions data (CSV): http://api.worldbank.org/v2/en/indicator/EN.ATM.CO2E.KT?downloadformat=csv
 
 I then used Javascript for parsing and insering the data to the database.
