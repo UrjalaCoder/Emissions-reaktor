@@ -1,5 +1,5 @@
 var perCapita = false;
-const MAX = 6;
+const MAX = 9;
 
 // Remove button handler -->
 // Removes item from list
