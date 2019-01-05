@@ -58,7 +58,6 @@ function handleAddButton(button) {
     }
 
     getData(keyName, function(data) {
-        shownData[keyName] = data;
         if(!graph) {
             createGraph();
         }
@@ -77,6 +76,7 @@ function handleAddButton(button) {
 
         console.log(colorIndex);
         shownData[keyName]['colorIndex'] = colorIndex;
+        shownData[keyName] = data;
         addCountryToList(keyName.split("_").join(" "), shownData[keyName]['colorIndex']);
         updateGraph();
     });
