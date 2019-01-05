@@ -50,21 +50,29 @@ function handleAddButton(button) {
 
     let keyName = spinnerValue.split(" ").join("_");
     if(keyName in shownData) {
-        console.log("Key already in graph!");
         return;
     }
 
     if(Object.keys(shownData).length >= MAX) {
-        console.log("Too many graphs!");
         return;
     }
 
     getData(keyName, function(data) {
         shownData[keyName] = data;
-        shownData[keyName]['color'] = COLORS[Math.floor(Math.random() * COLORS.length)];
         if(!graph) {
             createGraph();
         }
+
+        // Generate color -->
+        let colorIndex = Math.floor(Math.random() * COLORS.length);
+        let alreadyUsed = Object.keys(shownData).map((element) => {
+            return element['colorIndex'];
+        });
+        while(colorIndex in alreadyUsed) {
+            color = Math.floor(Math.random() * COLORS.length);
+        }
+        
+        shownData[keyName]['colorIndex'] = colorIndex;
         addCountryToList(keyName.split("_").join(" "), shownData[keyName]['color']);
         updateGraph();
     });

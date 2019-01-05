@@ -1,5 +1,7 @@
 'use strict';
-const COLORS = ['rgba(145, 60, 205, 0.6)', 'rgba(241, 95, 116, 0.6)', 'rgba(247, 109, 60, 0.6)', 'rgba(44, 168, 194, 0.6)', 'rgba(152, 203, 74, 0.6)', 'rgba(84, 129, 230, 0.6)'];
+const COLORS = ['rgba(145, 60, 205, 0.6)', 'rgba(241, 95, 116, 0.6)', 'rgba(247, 109, 60, 0.6)',
+                'rgba(44, 168, 194, 0.6)', 'rgba(152, 203, 74, 0.6)', 'rgba(84, 129, 230, 0.6)'
+                'rgba(19, 41, 61, 0.6)', 'rgba(36, 123, 160, 0.6)', 'rgba(109, 69, 76, 0.6)'];
 var shownData = {};
 var graph;
 var emissionKey = "emissions";
@@ -37,7 +39,7 @@ function updateGraph() {
             newDatasets.push({
                 label: `${formattedName} emissions`,
                 data: data,
-                borderColor: shownData[key]['color'],
+                borderColor: COLORS[shownData[key]['colorIndex']],
                 country: key
             });
         }
