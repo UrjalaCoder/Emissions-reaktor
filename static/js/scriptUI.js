@@ -73,7 +73,7 @@ function handleAddButton(button) {
             colorIndex = Math.floor(Math.random() * COLORS.length);
         }
 
-        console.log(color);
+        console.log(colorIndex);
         shownData[keyName]['colorIndex'] = colorIndex;
         addCountryToList(keyName.split("_").join(" "), shownData[keyName]['colorIndex']);
         updateGraph();
