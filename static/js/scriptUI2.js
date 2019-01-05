@@ -105,6 +105,9 @@ function createGraph() {
             datasets: []
         },
         options: {
+            legend: {
+                display: false
+            },
             scales: {
                 yAxes: [{
                     scaleLabel: {
@@ -115,9 +118,6 @@ function createGraph() {
                         beginAtZero: true
                     }
                 }]
-            },
-            legend: {
-                display: false
             }
         }
     });
