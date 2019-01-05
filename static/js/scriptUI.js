@@ -66,12 +66,11 @@ function handleAddButton(button) {
         let alreadyUsed = Object.keys(shownData).map((element) => {
             return shownData[element]['colorIndex'];
         });
-        console.log(alreadyUsed);
+        
         while(alreadyUsed.indexOf(colorIndex) !== -1) {
             colorIndex = Math.floor(Math.random() * COLORS.length);
         }
 
-        console.log(colorIndex);
         shownData[keyName] = data;
         shownData[keyName]['colorIndex'] = colorIndex;
         addCountryToList(keyName.split("_").join(" "), shownData[keyName]['colorIndex']);

@@ -30,7 +30,6 @@ function updateGraph() {
                     let point = element;
                     if(perCapita) {
                         point = element / shownData[key][populationKey][index];
-                        console.log(point);
                     }
                     data.push(point);
                 }
