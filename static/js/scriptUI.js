@@ -27,10 +27,18 @@ function addCountryToList(countryName, color) {
     // let finalElement = `<li class="countryItem" data-country="${whiteSpaceCountry}">${countryName} ${removeButton}</li>`;
 
     let stylingClasses = "list-group-item list-group-item-action";
-    let countryItem = `<button type="button" onclick="removeItem(this)" class="${stylingClasses}">${whiteSpaceCountry}</button>`;
+    let countryItem = `<button
+                            type="button"
+                            data-country="${countryName}"
+                            onclick="removeItem(this)"
+                            class="${stylingClasses}"
+                        >
+                            ${whiteSpaceCountry}
+                        </button>`;
 
     let finalElement = $(countryItem);
     finalElement.css("background-color", color.toString());
+    
     dataList.append($(finalElement));
 }
 
