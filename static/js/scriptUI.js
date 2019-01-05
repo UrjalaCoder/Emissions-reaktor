@@ -4,6 +4,7 @@ const MAX = 6;
 // Remove button handler -->
 // Removes item from list
 function removeItem(target) {
+    let countryName = target.dataset.country || "undefined";
     let list = $("#dataSetList");
     let searchString = `button[data-country="${countryName}"]`;
     list.find(searchString).remove();
@@ -24,7 +25,7 @@ function addCountryToList(countryName, color) {
     // colorDivElement.css("background-color", color.toString());
     // let finalElement = `<li class="countryItem" data-country="${whiteSpaceCountry}">${countryName} ${removeButton}</li>`;
 
-    let stylingClasses = "list-group-item list-group-item-action";
+    let stylingClasses = "list-group-item list-group-item-action countryItem";
     let countryItem = `<button
                             type="button"
                             data-country="${whiteSpaceCountry}"
