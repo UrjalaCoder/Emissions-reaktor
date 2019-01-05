@@ -105,20 +105,28 @@ function createGraph() {
             datasets: []
         },
         options: {
-            legend: {
-                display: false
-            },
-            scales: {
-                yAxes: [{
-                    scaleLabel: {
-                        display: true,
-                        labelString: labelString
-                    },
-                    ticks: {
-                        beginAtZero: true
-                    }
-                }]
-            }
+    legend: {
+      display: false
+    },
+    tooltips: {
+      callbacks: {
+        label: function(tooltipItem) {
+          console.log(tooltipItem)
+          return tooltipItem.yLabel;
         }
+      }
+    },
+    scales: {
+      yAxes: [{
+        scaleLabel: {
+          display: true,
+          labelString: "Y-Label"
+        },
+        ticks: {
+          beginAtZero: true
+        }
+      }]
+    }
+  }
     });
 }
