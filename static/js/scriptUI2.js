@@ -115,6 +115,9 @@ function createGraph() {
                         beginAtZero: true
                     }
                 }]
+            },
+            legend: {
+                display: false
             }
         }
     });
