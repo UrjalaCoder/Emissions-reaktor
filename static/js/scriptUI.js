@@ -60,5 +60,5 @@ function handleAddButton(button) {
 function handlePerCapita(button) {
     perCapita = !perCapita;
     updateGraph();
-    $(button).toggleClass("pressed");
+    $(button).toggleClass("active");
 }
