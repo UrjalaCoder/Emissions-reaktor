@@ -1,11 +1,10 @@
 <div class="jumbotron">
+    <canvas id="graphCanvas" width="300" height="200"></canvas>
     <select class="form-control" id="dropDown">
         {{#each countries}}
-            <option>{{this}}</option>
+        <option>{{this}}</option>
         {{/each}}
     </select>
-
-    <canvas id="graphCanvas" width="300" height="200"></canvas>
     <button id="addDataButton" class="btn btn-primary" onclick="handleAddButton(this)">Add data</button>
     <button id="perCapita" class="btn btn-primary" onclick="handlePerCapita(this)">Per capita</button>
     <div id="dataSetContainer">
