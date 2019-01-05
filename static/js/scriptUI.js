@@ -68,6 +68,7 @@ function handleAddButton(button) {
         let alreadyUsed = Object.keys(shownData).map((element) => {
             return element['colorIndex'];
         });
+        console.log(alreadyUsed);
         while(colorIndex in alreadyUsed) {
             colorIndex = Math.floor(Math.random() * COLORS.length);
         }
