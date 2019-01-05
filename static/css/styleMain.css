@@ -8,15 +8,13 @@ body {
     border: 1px solid black;
 }
 
-ul#dataSetList {
-    list-style: none;
-    font-size: 16px;
-    margin: 5px;
-    padding: 0px;
+div#dataSetList {
+    margin: 10px;
 }
 
 button.countryItem {
     padding-bottom: 10px;
     padding-top: 10px;
     font-weight: bold;
+    margin: 5px;
 }
