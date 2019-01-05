@@ -4,10 +4,8 @@ const MAX = 6;
 // Remove button handler -->
 // Removes item from list
 function removeItem(target) {
-    // Remove spaces add underscore -->
-    let countryName = target.dataset.country.split(" ").join("_");
     let list = $("#dataSetList");
-    let searchString = `li[data-country="${countryName}"]`;
+    let searchString = `button[data-country="${countryName}"]`;
     list.find(searchString).remove();
     delete shownData[countryName];
     updateGraph();
@@ -29,16 +27,16 @@ function addCountryToList(countryName, color) {
     let stylingClasses = "list-group-item list-group-item-action";
     let countryItem = `<button
                             type="button"
-                            data-country="${countryName}"
+                            data-country="${whiteSpaceCountry}"
                             onclick="removeItem(this)"
                             class="${stylingClasses}"
                         >
-                            ${whiteSpaceCountry}
+                            ${countryName}
                         </button>`;
 
     let finalElement = $(countryItem);
     finalElement.css("background-color", color.toString());
-    
+
     dataList.append($(finalElement));
 }
 
