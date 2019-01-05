@@ -1,16 +1,32 @@
 'use strict';
 const COLORS = ['rgba(145, 60, 205, 0.6)', 'rgba(241, 95, 116, 0.6)', 'rgba(247, 109, 60, 0.6)', 'rgba(44, 168, 194, 0.6)', 'rgba(152, 203, 74, 0.6)', 'rgba(84, 129, 230, 0.6)'];
 var shownData = {};
-var graph;
+var chart;
+const CHART_OPTIONS = {
+    legend: {
+        display: false
+    },
+    scales: {
+        yAxes: [{
+            scaleLabel: {
+                display: true,
+                labelString: labelString
+            },
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    }
+};
 var emissionKey = "emissions";
 var populationKey = "population";
 
 
-// Updates the graph to reflect the shownData object -->
+// Updates the chart to reflect the shownData object -->
 // Returns nothing.
-function updateGraph() {
-    // If graph is not initialized, return.
-    if(!graph) {
+function updatechart() {
+    // If chart is not initialized, return.
+    if(!chart) {
         return;
     }
     // Set datasets to empty list -->
@@ -43,12 +59,12 @@ function updateGraph() {
         }
 
     }
-    graph.data.datasets = newDatasets;
+    chart.data.datasets = newDatasets;
 
 
     let labelString = (perCapita) ? "CO2 Emissions per population" : "Total CO2 emissions";
     labelString += "(kt)";
-    graph.options = {
+    chart.options = {
         scales: {
             yAxes: [{
                 scaleLabel: {
@@ -62,7 +78,7 @@ function updateGraph() {
         }
     };
 
-    graph.update();
+    chart.update();
 }
 
 // Gets the data of a particular country by interacting with API.
@@ -83,12 +99,12 @@ function setYearlabels(start, end) {
     for(let i = 0; i < (end - start + 1); i++) {
         yearLabels.push((start + i).toString());
     }
-    graph.data.labels = yearLabels;
-    graph.update();
+    chart.data.labels = yearLabels;
+    chart.update();
 }
 
-function createGraph() {
-    let canvas = $('#graphCanvas');
+function createchart() {
+    let canvas = $('#chartCanvas');
     let currentYear = new Date().getFullYear();
     let yearLabels = [];
     for(var i = 0; i < (Number(currentYear) - 1960 + 1); i++) {
@@ -98,35 +114,12 @@ function createGraph() {
     let labelString = (perCapita) ? "CO2 Emissions per population" : "Total CO2 emissions";
     labelString += "(kt)";
 
-    graph = new Chart(canvas, {
+    chart = new Chart(canvas, {
         type: 'line',
         data: {
             labels: yearLabels,
             datasets: []
         },
-        options: {
-    legend: {
-      display: false
-    },
-    tooltips: {
-      callbacks: {
-        label: function(tooltipItem) {
-          console.log(tooltipItem)
-          return tooltipItem.yLabel;
-        }
-      }
-    },
-    scales: {
-      yAxes: [{
-        scaleLabel: {
-          display: true,
-          labelString: "Y-Label"
-        },
-        ticks: {
-          beginAtZero: true
-        }
-      }]
-    }
-  }
+        options: CHART_OPTIONS
     });
 }
