@@ -69,7 +69,7 @@ function handleAddButton(button) {
             return element['colorIndex'];
         });
         while(colorIndex in alreadyUsed) {
-            color = Math.floor(Math.random() * COLORS.length);
+            colorIndex = Math.floor(Math.random() * COLORS.length);
         }
 
         console.log(color);
