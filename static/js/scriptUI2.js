@@ -38,6 +38,7 @@ function updateGraph() {
             newDatasets.push({
                 label: `${formattedName} emissions`,
                 data: data,
+                fill: false,
                 borderColor: COLORS[shownData[key]['colorIndex']],
                 country: key
             });
