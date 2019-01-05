@@ -12,6 +12,14 @@ div#dataSetList {
     margin: 10px;
 }
 
+button#addDataButton {
+    margin: 5px;
+}
+
+button#perCapita {
+    margin: 5px;
+}
+
 button.countryItem {
     padding-bottom: 10px;
     padding-top: 10px;
