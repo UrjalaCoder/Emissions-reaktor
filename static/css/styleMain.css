@@ -14,7 +14,7 @@ ul#dataSetList {
     margin: 5px;
 }
 
-li#countryItem {
+li.countryItem {
     padding-bottom: 10px;
     padding-top: 10px;
 }
