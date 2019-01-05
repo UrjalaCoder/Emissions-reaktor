@@ -6,7 +6,8 @@ You can find a live version of this application at: https://reaktor-emissions.he
 I use MongoDB and mLab for the database. The server is written using NodeJS and I use Handlebars as a templating engine
 for creating the HTML.
 
-On client side I use jQuery and ChartJS. jQuery for all kinds of interactive elements and AJAX and ChartJS for creating and updating the chart.
+On client side I use jQuery and ChartJS. jQuery for all kinds of interactive elements and AJAX. 
+ChartJS for creating and updating the chart.
 
 ## Data
 I used these open domain datafiles for my application.
