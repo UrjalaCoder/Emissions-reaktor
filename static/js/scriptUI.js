@@ -71,9 +71,10 @@ function handleAddButton(button) {
         while(colorIndex in alreadyUsed) {
             color = Math.floor(Math.random() * COLORS.length);
         }
-        
+
+        console.log(color);
         shownData[keyName]['colorIndex'] = colorIndex;
-        addCountryToList(keyName.split("_").join(" "), shownData[keyName]['color']);
+        addCountryToList(keyName.split("_").join(" "), shownData[keyName]['colorIndex']);
         updateGraph();
     });
 }
