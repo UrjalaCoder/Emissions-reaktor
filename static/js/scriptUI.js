@@ -16,7 +16,6 @@ function removeItem(target) {
 
 // Add item to list
 function addCountryToList(countryName, color) {
-    console.log(color);
     let dataList = $("#dataSetList");
     let whiteSpaceCountry = countryName.split(" ").join("_");
     // let removeButton = `<button data-country="${countryName}" class="btn btn-danger removeButton" onclick="removeItem(this)">Remove</button>`;
@@ -65,9 +64,7 @@ function handleAddButton(button) {
         // Generate color -->
         let colorIndex = Math.floor(Math.random() * COLORS.length);
         let alreadyUsed = Object.keys(shownData).map((element) => {
-            if(shownData[element]['colorIndex']) {
-                return shownData[element]['colorIndex'];
-            }
+            return shownData[element]['colorIndex'];
         });
         console.log(alreadyUsed);
         while(alreadyUsed.indexOf(colorIndex) !== -1) {
