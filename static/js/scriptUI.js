@@ -36,7 +36,7 @@ function addCountryToList(countryName, color) {
                         </button>`;
 
     let finalElement = $(countryItem);
-    finalElement.css("background-color", color.toString());
+    finalElement.css("background-color", COLORS[color].toString());
 
     dataList.append($(finalElement));
 }
