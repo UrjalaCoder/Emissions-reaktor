@@ -30,3 +30,10 @@ This section describes the basic functionality of each file.
   * '/api/helpers.js' Some universal functions used by other files. Mainly formatting.
   * '/api/datamodel.json' JSON file describing the data model of the database. Each element of the database is like that.
   * '/data' This folder contains the datafiles used by 'initializeDatabase.js' for the initialization of the database.
+  * '/static/css/styleMain.css' Styling for the page
+  * '/static/js/scriptUI.js' Javascript file for handling the controls of the chart.
+  * '/static/js/scriptUI2.js' Javascript file for updating the chart. Also connects to the API using AJAX.
+  * '/views/layouts/main.handlebars' Basic layout used by 'home.handlebars'. Mainly futureproofing the site at this point.
+  * '/views/home.handlebars' Actual HTML template for the homepage.
+
+Libraries are also included in their respected '/static/' folders.
