@@ -1,7 +1,8 @@
 # Emissions-reaktor
 
 This is a web application that shows users an interactive graph of CO2-emissions data.
-You can find a live version of this application at: https://reaktor-emissions.herokuapp.com (It's a bit slow but works :D).
+You can find a live version of this application at: https://reaktor-emissions.herokuapp.com
+It runs on a heroku container and uses free dynos so it's a bit slow.
 
 ## Technologies
 
